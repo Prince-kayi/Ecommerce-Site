@@ -1,0 +1,157 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.slider {
+  margin-top: 250px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image {
+  position: relative;
+  margin-top: -200px;
+  width: 550px;
+  height: 300px;
+  border-radius: 10px;
+  left: -75px;
+  margin-bottom: 250px;
+  cursor: pointer;
+}
+.right-arrow {
+  position: relative;
+  top: -245px;
+  right: -515px;
+  font-size: 2rem;
+  color: blue;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+}
+.left-arrow {
+  position: relative;
+  top: -245px;
+  left: -65px;
+  font-size: 2rem;
+  color: blue;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+}
+.slide {
+  opacity: 0;
+  transition-duration: 1.2ms ease;
+}
+.slide-active {
+  opacity: 1;
+  transition-duration: 1.3ms;
+  transform: scale(1.10);
+}
+.cards {
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 2px 20px gray;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 200ms ease-in;
+  height: 450px;
+}
+.card-ima {
+  height: 15rem;
+  width: 100%;
+}
+.wrapper {
+  cursor: pointer;
+  margin-top: -200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 20rem));
+  gap: 2rem;
+  justify-content: center;
+}
+.card-title {
+  padding: 0.1rem;
+  font-weight: lighter;
+}
+.card-desc {
+  padding: 0 1rem;
+  font-weight: bolder;
+}
+.aries {
+  padding: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1rem;
+  background: transparent;
+  color: red;
+  border: 2px solid red;
+  transition: background 200ms ease-in, color 200ms ease-in;
+  cursor: pointer;
+}
+.cards:hover .aries {
+  color: white;
+  background-color: red;
+}
+.cards:hover {
+  transform: scale(1.02);
+
+}
+.access {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-transform: uppercase;
+}
+.box {
+  display: flex;
+  justify-content: center;
+}
+.ad {
+  margin-top: -20px;
+}
+.ko {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 350px;
+}

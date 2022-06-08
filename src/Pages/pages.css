@@ -1,0 +1,135 @@
+.loginn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.login-wrap {
+    display: flex;
+}
+.login-form {
+    margin: 25px;
+}
+.login-form input {
+    height: 27px;
+    width: 500px;
+    margin: 30px;
+}
+.login-form label {
+    margin-left: 30px;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.logi-bottom {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.logi-bottom p {
+    text-transform: capitalize;
+    text-align: center;
+}
+.loggin {
+    margin-left: 150px;
+    height: 40px;
+    font-size: 1rem;
+    border: 2px solid blue;
+    width: 250px;
+    font-family: inherit;
+    font-weight: bold;
+    background: transparent;
+    color: blue;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    cursor: pointer;
+}
+.loggin:hover {
+    color: whitesmoke;
+    background-color: blue;
+}
+.logi-bottom a {
+    text-decoration: none;
+}
+.logi-bottom a:hover {
+    text-decoration: underline;
+}
+.Regi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-left: 300px;
+}
+.regi-wrap {
+    display: flex;
+}
+.reg-form {
+    margin: 25px;
+    margin-top: 120px;
+}
+.reg-form-in {
+    height: 20px;
+    width: 500px;
+    margin: 30px;
+    margin-left: -25px;
+}
+.reg-form-in label {
+    margin-left: 30px;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.regi-bottom {
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.reg-form-in input {
+    position: relative;
+    top: -28px;
+    margin-left: 250px;
+    width: 350px;
+}
+.regi-bottom p {
+    text-transform: none;
+}
+.register-now {
+    height: 40px;
+    font-size: 1rem;
+    border: 2px solid blue;
+    width: 250px;
+    font-family: inherit;
+    font-weight: bold;
+    background: transparent;
+    color: blue;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    cursor: pointer;
+}
+.register-now:hover {
+    color: white;
+    background-color: darkblue;
+}
+.regi-bottom a {
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.regi-bottom a:hover {
+    text-decoration: underline;
+}
+.boss {
+    display: flex;
+    flex-wrap: wrap;
+}
+.bos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+    margin-left: -300px;
+}
+span {
+    text-transform: capitalize;
+    font-size: 16px;
+}
+.in {
+    margin-left: 3px;
+}
+.inn {
+    margin-left: 35px;
+}

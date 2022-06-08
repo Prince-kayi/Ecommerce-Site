@@ -1,0 +1,156 @@
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    width: 100%;
+}
+.logo {
+    display: flex;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.Lheading {
+    margin-left: -20px;
+}
+.rhead {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+.rheadi a {
+    margin: 20px;
+    text-decoration: none;
+    color: #000;
+
+}
+.rheadi a:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+.heart a {
+    background-color: crimson;
+    border-radius: 18px;
+    float: left;
+    margin-right: 6px;
+    padding: 4px 10px;
+    color: white;
+}
+.shopin a {
+    background-color: green;
+    border-radius: 18px;
+    padding: 6px 8px;
+    min-width: 32px;
+    max-height: 32px;
+    max-width: 32px;
+    float: left;
+    margin-right: 6px;
+    color: white;
+}
+h3 {
+    font-size: 2.0rem;
+}
+h5 {
+    color: bisque;
+    background-color: blue;
+    border-radius: 18px;
+    padding: 10px 10px;
+    margin-right: 6px;
+}
+.middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form {
+    margin-top: -370px;
+}
+.mbutton {
+    margin-top: 8px;
+}
+.centa {
+    background-color: blue;
+    height: 90px;
+}
+.Lmiddle {
+    margin-top: 15px;
+    position: relative;
+    margin-left: 80px;
+}
+.dbuttons {
+    margin-bottom: 5px;
+    position: relative;
+    margin-left: -1060px;
+}
+.dep {
+    margin-top: 20px;
+    list-style-type: none;
+    background-color: blueviolet;
+    display: block;
+    padding: -20px;
+}
+.depi:hover {
+    background-color: chocolate;
+    cursor: pointer;
+}
+.label {
+    margin-top: -8px;
+    height: 33px;
+    width: 160px;
+    background-color: black;
+    color: white;
+}
+.but {
+    height: 30px;
+    width: 120px;
+}
+.buti {
+    height: 30px;
+    width: 145px;
+}
+input {
+    height: 26px;
+}
+
+select {
+    height: 33px;
+}
+.search {
+    color: white;
+    background-color: darkslategrey;
+    border-radius: 2px;
+    padding: 6px 18px;
+    margin-right: 6px;
+}
+.Menu {
+    width: 150px;
+    position: absolute;
+    top: 48px;
+    list-style: none;
+    align-items: center;
+    background-color: aqua;
+    left: 950px;
+    transition: 350ms ease-in;
+}
+.acc-list {
+    display: block;
+    width: 90%;
+    height: 100%;
+    text-decoration: none;
+    padding: -30px;
+}
+.Menu li {
+   cursor: pointer;
+}
+.Menu li:hover {
+    background-color: blue
+}
+.menu-active {
+    display: none;
+}

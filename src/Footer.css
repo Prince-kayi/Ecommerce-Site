@@ -1,0 +1,118 @@
+.foot{
+ 
+display: flex;
+flex-direction:column ;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+.feet{
+   
+    background-color: blue; 
+     margin-top: 70px;
+}
+.lwrap{
+    margin-top: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   height: 55vh;
+}
+.links{
+    width: 17%;
+    padding: 0 15px;  
+}
+ul{
+  
+  list-style: none;  
+}
+
+.links h2{
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: 500;
+    position: relative;
+}
+.link a{
+    text-transform: capitalize;
+    color: white;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    margin: 10px;
+    transform: all 0.3s ease;
+}
+.link a:hover{
+    color:brown;
+    padding-left: 10px;
+}
+.foot2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.foot2 a{
+    display: inline block;
+    color: white;
+    margin-right: 10px;
+    height: 35px;
+    width: 40px;
+   background-color:rgba(255, 255,255, 0.2);
+   border-radius: 50%;
+   text-align: center;
+   line-height: 40px;
+    transition: all 0.5s ease;
+}
+.foot2 a:hover{
+    color: #24262b;
+   background-color: whitesmoke; 
+   
+}
+.middle-bot a{
+    margin-right: 30px;
+    color:cornsilk;
+    text-decoration: none;
+   
+}
+.middle-bot a:hover{
+    
+    text-decoration: underline;
+}
+.middle-bot{
+   
+    background-color: darkslategray;
+    height: 12vh;
+  
+}
+.payment{
+   
+   height: 17vh;
+  background-color:black;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.pay{
+font-size: 3rem;
+margin-right: 80px;
+color: white;
+}
+.right{
+    color: whitesmoke;
+    
+}
+.join a{
+    margin-right: 20px;
+    color: whitesmoke;
+    font-size: 2rem;
+}
+.join a:hover{
+color: blueviolet;
+}
+ 
+.ap{
+    color: white;
+}
