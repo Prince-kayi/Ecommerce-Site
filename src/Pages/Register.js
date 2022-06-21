@@ -8,10 +8,18 @@ const Register=()=>{
          password: " ",
          retypePassword: " ",
          Mnumber:" ",
-         choice: false
-
+         choice: false,
      })
-
+     const [errors,setError]=useState({
+        firstName:" ",
+        lastName:" ",
+        email: " ",
+        retypeEmail: " ",
+        password: " ",
+        retypePassword: " ",
+        Mnumber:" ",
+     })
+ const [inputClass,setInput]=useState("")
      const handlerChange=(e)=>
      {
              const{name,value,type,checked}=e.target
@@ -20,14 +28,41 @@ const Register=()=>{
                      [name]:type=="checkbox"? checked:value
              }))
      }
-
      const ShowResults=()=>{
          console.log("forms",forms)
      }
-
      const onSubmit=(e)=>{
          e.preventDefault();
-
+         const FnameRegex=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+         if(forms.firstName==" " ||forms.lastName==""|| forms.email=="" || forms.password==""|| forms.Mnumber==""){
+            setError((forms)=>({
+            ...forms,
+            firstName:"Please enter your first Name",
+            lastName:"Please enter  your Last Name",
+            email:"Please enter your email address",
+            password:"Please enter  your password",
+            Mnumber:"Please enter a Phone/Mobile number"    
+            }));
+       return;
+         } 
+            if(!forms.firstName.includes("@")){
+                setError((forms)=>({
+                    ...forms,
+                    firstName:" name does not match"
+                }))
+          }
+          else{
+                setForms((forms)=>({
+                    ...forms,
+                    firstName:"",
+                    lastName:" ",
+                    email:"",
+                    password:"",
+                    Mnumber:" ",
+                    retypeEmail:" ",
+                    retypePassword:" "
+                }))
+            }    
      }
     return(
         <>
@@ -37,18 +72,22 @@ const Register=()=>{
                     <h1 className="in"> Register</h1>
                     <div className="reg-form-in">
                     <label>first Name*:
-                      <input type="text" name="firstName" onChange={handlerChange} value={forms.firstName}  required/>
+                      <input type="text" name="firstName" onChange={handlerChange} value={forms.firstName} 
+                       />
+                      {!!errors && <div className="error-msg">{errors.firstName}</div>}
                     </label>
                     </div>
                     <div  className="reg-form-in">
                     <label>
                  Last Name*:     <input type="text" name="lastName" onChange={handlerChange} value={forms.lastName} required/>
                     </label>
+                    {!!errors && <div className="error-msg">{errors.lastName}</div>}
                     </div>
                     <div className="reg-form-in">
                     <label>
                  Email*:     <input type="text" name="email" onChange={handlerChange} value={forms.email} required/>
                     </label>
+                    {<div className="error-msg">{errors.email}</div>}
                     </div>
                     <div className="reg-form-in">
                     <label>
@@ -59,6 +98,7 @@ const Register=()=>{
                     <label>
                  Password*:     <input type="text" name="password" onChange={handlerChange}  value={forms.password} required/>
                     </label>
+                    {<div className="error-msg">{errors.password}</div>}
                     </div>
                     <div className="reg-form-in">
                     <label>
@@ -69,6 +109,7 @@ const Register=()=>{
                     <label>
                 Mobile Number*:     <input type="text" name="Mnumber" onChange={handlerChange} value={forms.Mnumber} required />
                     </label>
+                    {<div className="error-msg">{errors.Mnumber}</div>}
            </div>
            <div className="boss">
                <div>

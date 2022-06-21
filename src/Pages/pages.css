@@ -63,7 +63,7 @@
 }
 .reg-form {
     margin: 25px;
-    margin-top: 120px;
+    margin-top: 40px;
 }
 .reg-form-in {
     height: 20px;
@@ -108,9 +108,12 @@
 .regi-bottom a {
     text-decoration: none;
     text-transform: capitalize;
+   
+    
 }
 .regi-bottom a:hover {
     text-decoration: underline;
+  
 }
 .boss {
     display: flex;
@@ -133,3 +136,29 @@ span {
 .inn {
     margin-left: 35px;
 }
+
+.error-msg{
+    font-size: 15px;
+    color: red;
+    margin-left: 30px;
+    margin-top: -20px;
+   
+  }
+  .finally{
+    width: 100%;
+  background-color: aqua;
+  color: white;
+  font-weight: 800;
+  padding: 25px;
+  }
+  .fogot{
+    margin-left: 320px;
+    text-decoration: none;
+    color: blue;
+  }
+  .fogot:hover{
+    text-decoration: underline;
+  }
+  .invalid{
+    border:1px solid #ff0000
+  }
