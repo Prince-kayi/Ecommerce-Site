@@ -69,7 +69,7 @@ h5 {
     align-items: center;
 }
 .form {
-    margin-top: -370px;
+    margin-top: -350px;
 }
 .mbutton {
     margin-top: 8px;
@@ -81,7 +81,7 @@ h5 {
 .Lmiddle {
     margin-top: 15px;
     position: relative;
-    margin-left: 80px;
+    margin-left: 55px;
 }
 .dbuttons {
     margin-bottom: 5px;
@@ -89,11 +89,12 @@ h5 {
     margin-left: -1060px;
 }
 .dep {
-    margin-top: 20px;
+    margin-top: 0px;
     list-style-type: none;
     background-color: blueviolet;
     display: block;
     padding: -20px;
+   margin-left: -1px;
 }
 .depi:hover {
     background-color: chocolate;
@@ -101,18 +102,19 @@ h5 {
 }
 .label {
     margin-top: -8px;
-    height: 33px;
-    width: 160px;
+    height: 38px;
+    width: 210px;
     background-color: black;
     color: white;
+    
 }
 .but {
     height: 30px;
-    width: 120px;
+    width: 125px;
 }
 .buti {
     height: 30px;
-    width: 145px;
+    width: 150px;
 }
 input {
     height: 26px;
@@ -127,6 +129,7 @@ select {
     border-radius: 2px;
     padding: 6px 18px;
     margin-right: 6px;
+    margin-top: 200000px;
 }
 .Menu {
     width: 150px;

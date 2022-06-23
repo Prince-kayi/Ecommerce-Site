@@ -4,6 +4,7 @@ import { Link, BrowserRouter } from 'react-router-dom';
 import Acc from './Acc';
 const Display = () => {
   const [accDrop, setDrop]=useState(false)
+
   return (
     <>
       <nav>
@@ -19,8 +20,8 @@ const Display = () => {
         </div>
         <div className="Rheading">
           <ul className="rhead">
-          <li className='rheadi'> <Link to="/">Login</Link></li> 
-            <li className='rheadi'><Link to=".register">Register</Link></li>
+          <li className='rheadi'> <Link to="/login">Login</Link></li> 
+            <li className='rheadi'><Link to="/register">Register</Link></li>
             <li className='rheadi'><Link to="/orders">Orders</Link></li>
            <li
             onMouseEnter={()=>setDrop(true)}
@@ -68,7 +69,7 @@ const Display = () => {
         <input type="text"
           placeholder="Search for products,brand..."
           name="look"
-          size="130" 
+          size="115" 
           />
         <select>
           <option>All Departments</option>

@@ -63,13 +63,14 @@ const Login = () => {
                <label>Email address </label>
                   <div className="ad">
                      <input type="text" name="emailAddress" onChange={Changer} value={Loginform.emailAddress} />
-                {<div className="error-msg">{error.emailAddress}</div>}
+                {!!error.emailAddress&&<div className="error-msg">{error.emailAddress}</div>}
                   </div>
                <label> Password </label>
-               <a href="/forgot-password" className="fogot">Forgot password?</a>
-               <div className="ad">
+              
+             <a href="/forgotPass" className="fogot">Forgot password?</a>
+              <div className="ad">  
                   <input type="password" name="password" onChange={Changer} value={Loginform.password} />
-                  {<div className="error-msg">{error.password}</div>}
+                  {!!error.password &&<div className="error-msg">{error.password}</div>}
                </div>
                <div className="logi-bottom">
                   <button className="loggin" onClick={Show}> Login</button>

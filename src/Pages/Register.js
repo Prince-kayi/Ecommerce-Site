@@ -19,7 +19,6 @@ const Register=()=>{
         retypePassword: " ",
         Mnumber:" ",
      })
- const [inputClass,setInput]=useState("")
      const handlerChange=(e)=>
      {
              const{name,value,type,checked}=e.target
@@ -33,8 +32,9 @@ const Register=()=>{
      }
      const onSubmit=(e)=>{
          e.preventDefault();
-         const FnameRegex=/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-         if(forms.firstName==" " ||forms.lastName==""|| forms.email=="" || forms.password==""|| forms.Mnumber==""){
+        // setError(ValidRegisters(errors))
+
+        if (forms.firstName==" " ||forms.lastName==""|| forms.email=="" || forms.password==""|| forms.Mnumber==""){
             setError((forms)=>({
             ...forms,
             firstName:"Please enter your first Name",
@@ -44,26 +44,51 @@ const Register=()=>{
             Mnumber:"Please enter a Phone/Mobile number"    
             }));
        return;
-         } 
-            if(!forms.firstName.includes("@")){
-                setError((forms)=>({
-                    ...forms,
-                    firstName:" name does not match"
-                }))
-          }
-          else{
-                setForms((forms)=>({
-                    ...forms,
-                    firstName:"",
-                    lastName:" ",
-                    email:"",
-                    password:"",
-                    Mnumber:" ",
-                    retypeEmail:" ",
-                    retypePassword:" "
-                }))
-            }    
-     }
+         }     
+          else  {
+            setError((forms)=>({
+                ...forms,
+                firstName:" ",
+                lastName: " "    
+            }))          
+     }   
+  if(!forms.email.includes("@")) {
+    setError((forms)=>({
+        ...forms,
+        email:" enter valid email address"
+    }))       
+}
+else {
+    setError((forms)=>({
+        ...forms,
+        email:" "
+    }))       
+}
+if(forms.password.length < 5) {
+    setError((forms)=>({
+        ...forms,
+        password:" password is too shot"
+    }))       
+}
+else {
+    setError((forms)=>({
+        ...forms,
+        password:" "
+    }))       
+}
+if(forms.Mnumber.length < 10) {
+    setError((forms)=>({
+        ...forms,
+        Mnumber:" Mobile/Phone number must be 10 digits"
+    }))       
+}
+else {
+    setError((forms)=>({
+        ...forms,
+        Mnumber:" "
+    }))       
+}
+    }
     return(
         <>
         <div className="Regi">
@@ -74,42 +99,42 @@ const Register=()=>{
                     <label>first Name*:
                       <input type="text" name="firstName" onChange={handlerChange} value={forms.firstName} 
                        />
-                      {!!errors && <div className="error-msg">{errors.firstName}</div>}
                     </label>
+                     {!!errors.firstName &&<div className="error-msg">{errors.firstName}</div>}
                     </div>
                     <div  className="reg-form-in">
                     <label>
-                 Last Name*:     <input type="text" name="lastName" onChange={handlerChange} value={forms.lastName} required/>
+                 Last Name*:     <input type="text" name="lastName" onChange={handlerChange} value={forms.lastName}/>
                     </label>
-                    {!!errors && <div className="error-msg">{errors.lastName}</div>}
+                    {!!errors.lastName && <div className="error-msg">{errors.lastName}</div>}
                     </div>
                     <div className="reg-form-in">
                     <label>
-                 Email*:     <input type="text" name="email" onChange={handlerChange} value={forms.email} required/>
+                 Email*:     <input type="text" name="email" onChange={handlerChange} value={forms.email} />
                     </label>
-                    {<div className="error-msg">{errors.email}</div>}
+                    {!!errors.email && <div className="error-msg">{errors.email}</div>}
                     </div>
                     <div className="reg-form-in">
                     <label>
-                 Retype Email*:     <input type="text" name="retypeEmail" onChange={handlerChange} value={forms.retypeEmail} required/>
-                    </label>
-                    </div>
-                    <div className="reg-form-in">
-                    <label>
-                 Password*:     <input type="text" name="password" onChange={handlerChange}  value={forms.password} required/>
-                    </label>
-                    {<div className="error-msg">{errors.password}</div>}
-                    </div>
-                    <div className="reg-form-in">
-                    <label>
-                Retype Password*:     <input type="text" name="retypePassword" onChange={handlerChange} value={forms.retypePassword} required/>
+                 Retype Email*:     <input type="text" name="retypeEmail" onChange={handlerChange} value={forms.retypeEmail} />
                     </label>
                     </div>
                     <div className="reg-form-in">
                     <label>
-                Mobile Number*:     <input type="text" name="Mnumber" onChange={handlerChange} value={forms.Mnumber} required />
+                 Password*:     <input type="text" name="password" onChange={handlerChange}  value={forms.password} />
                     </label>
-                    {<div className="error-msg">{errors.Mnumber}</div>}
+                    {!!errors.password &&<div className="error-msg">{errors.password}</div>}
+                    </div>
+                    <div className="reg-form-in">
+                    <label>
+                Retype Password*:     <input type="text" name="retypePassword" onChange={handlerChange} value={forms.retypePassword}/>
+                    </label>
+                    </div>
+                    <div className="reg-form-in">
+                    <label>
+                Mobile Number*:     <input type="number" name="Mnumber" onChange={handlerChange} value={forms.Mnumber}  />
+                    </label>
+                    {!!errors.Mnumber && <div className="error-msg">{errors.Mnumber}</div>}
            </div>
            <div className="boss">
                <div>
@@ -184,14 +209,9 @@ const Register=()=>{
                </div>
            </div>
                 </form>
-            </div>
-            
+            </div>   
         </div>
       </>  
-    )
-
-;
-
-
+    );
 }
 export default Register
