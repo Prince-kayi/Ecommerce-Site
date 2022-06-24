@@ -47,7 +47,7 @@
 .image {
   position: relative;
   margin-top: -200px;
-  width: 550px;
+  width: 405px;
   height: 300px;
   border-radius: 10px;
   left: -75px;
@@ -57,7 +57,7 @@
 .right-arrow {
   position: relative;
   top: -245px;
-  right: -515px;
+  right: -365px;
   font-size: 2rem;
   color: blue;
   z-index: 1;
@@ -67,7 +67,7 @@
 .left-arrow {
   position: relative;
   top: -245px;
-  left: -65px;
+  left: -60px;
   font-size: 2rem;
   color: blue;
   z-index: 1;
@@ -133,11 +133,13 @@
   transform: scale(1.02);
 
 }
+.cards .aries:active{
+  transform: translateY(2px);
+}
 .access {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 140vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;

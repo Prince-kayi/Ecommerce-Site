@@ -105,8 +105,7 @@ h5 {
     height: 38px;
     width: 210px;
     background-color: black;
-    color: white;
-    
+    color: white;   
 }
 .but {
     height: 30px;
@@ -117,19 +116,19 @@ h5 {
     width: 150px;
 }
 input {
-    height: 26px;
+    height: 30px;
 }
 
 select {
-    height: 33px;
+    height: 36px;
 }
 .search {
     color: white;
     background-color: darkslategrey;
-    border-radius: 2px;
-    padding: 6px 18px;
+    border-radius: 4px;
+    padding: 5px 18px 10px;
     margin-right: 6px;
-    margin-top: 200000px;
+    height: 20px;
 }
 .Menu {
     width: 150px;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
 import "./Display.css"
 import Display from "./Display";
@@ -13,12 +13,13 @@ import "./Footer.css"
 import Login from "./Pages/Login";
 
 const App = () => {
+  
   return (
     <>
       <Display />
       <div className="ko">
-        <ImageSlider slide={SliderData} />
-        <div className="second">  </div>
+        <ImageSlider slide={SliderData}   /> 
+        <div className="second">  <ImageSlider slide={SliderData} className="left_slide" /> </div>
       </div>
       <div className="wrapper">
         <Card
@@ -115,11 +116,11 @@ const App = () => {
       </div>
       <div className="access">
         <Routes>
-          <Route to="/register" element={<Register />} />
+          <Route to="/register"  exact element={<Register />} />
           <Route to="/login" element={<Login />} />
         </Routes>
       </div>
-      <Login />
+      <Login/>
       <Zfooter />
     </>
   );

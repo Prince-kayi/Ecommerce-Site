@@ -126,6 +126,9 @@
     margin-top: 63px;
     margin-left: -300px;
 }
+.boss input{
+    color: blue;
+}
 span {
     text-transform: capitalize;
     font-size: 16px;
@@ -151,14 +154,19 @@ span {
   padding: 25px;
   }
   .fogot{
+    position: relative;
     margin-left: 320px;
     text-decoration: none;
-
     cursor: pointer;
+    color: blue;
   }
 .fogot:hover{
     text-decoration: underline;
   }
   .invalid{
     border:1px solid #ff0000
+  }
+ .second{
+    position: relative;
+   right: -45px;
   }
