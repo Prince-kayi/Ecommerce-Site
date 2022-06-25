@@ -157,3 +157,8 @@ select {
 .menu-active {
     display: none;
 }
+@media screen and (max-width<900) {
+    .logo{
+        color: darkorchid;
+    }
+}
