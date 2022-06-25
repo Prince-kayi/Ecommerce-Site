@@ -16,7 +16,7 @@ const Login = () => {
    }
    const Submit = (e) => {
       e.preventDefault();
-      if(Loginform.emailAddress==" " || Loginform.password==""){
+      if(Loginform.emailAddress===" " || Loginform.password===""){
          setErrors((LoginForm)=>({
          ...LoginForm,
          emailAddress:"Please enter your email address",
@@ -64,9 +64,8 @@ const Login = () => {
                   <div className="ad">
                      <input type="text" name="emailAddress" onChange={Changer} value={Loginform.emailAddress} />
                 {!!error.emailAddress&&<div className="error-msg">{error.emailAddress}</div>}
-                  </div>
+                  </div> 
                <label> Password </label>
-              
              <a href="/forgotPass" className="fogot">Forgot password?</a>
               <div className="ad">  
                   <input type="password" name="password" onChange={Changer} value={Loginform.password} />
@@ -74,7 +73,7 @@ const Login = () => {
                </div>
                <div className="logi-bottom">
                   <button className="loggin" onClick={Show}> Login</button>
-                  <p>New to BuyAlot ? <a href="/register"> Create account</a></p>
+                  <p>New to BuyAlot ? <a href="/registers"> Create account</a></p>
                </div>
             </form>
          </div>

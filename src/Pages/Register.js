@@ -24,17 +24,18 @@ const Register=()=>{
              const{name,value,type,checked}=e.target
              setForms((forms)=>({
                      ...forms,
-                     [name]:type=="checkbox"? checked:value
+                     [name]:type==="checkbox"? checked:value
              }))
      }
      const ShowResults=()=>{
          console.log("forms",forms)
      }
+     //validate form
      const onSubmit=(e)=>{
          e.preventDefault();
         // setError(ValidRegisters(errors))
 
-        if (forms.firstName==" " ||forms.lastName==""|| forms.email=="" || forms.password==""|| forms.Mnumber==""){
+        if (forms.firstName===" " ||forms.lastName===""|| forms.email==="" || forms.password===""|| forms.Mnumber===""){
             setError((forms)=>({
             ...forms,
             firstName:"Please enter your first Name",
@@ -132,7 +133,7 @@ else {
                     </div>
                     <div className="reg-form-in">
                     <label>
-                Mobile Number*:     <input type="number" name="Mnumber" onChange={handlerChange} value={forms.Mnumber}  />
+                Mobile Number*:     <input type="text" name="Mnumber" onChange={handlerChange} value={forms.Mnumber}  />
                     </label>
                     {!!errors.Mnumber && <div className="error-msg">{errors.Mnumber}</div>}
            </div>
