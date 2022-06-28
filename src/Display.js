@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaCaretDown, FaHeart, FaShoppingCart, FaSearch, FaCaretRight } from "react-icons/fa"
-import { Link, BrowserRouter } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import Acc from './Acc';
 const Display = () => {
   const [accDrop, setDrop]=useState(false)
@@ -13,7 +13,7 @@ const Display = () => {
           <h5>com</h5>
         <div className=" Lheading">
           <ul className='rhead'>
-        <li className='rheadi'><Link to="/help">Help</Link></li>  
+        <li className='rheadi'><Link to="/">Help</Link></li>  
         <li className='rheadi'>  <Link to="/sell">Sell on BuyerAlot</Link></li>
        </ul>
        </div>
@@ -69,7 +69,7 @@ const Display = () => {
         <input type="text"
           placeholder="Search for products,brand..."
           name="look"
-          size="115" 
+          size="130" 
           />
         <select>
           <option>All Departments</option>

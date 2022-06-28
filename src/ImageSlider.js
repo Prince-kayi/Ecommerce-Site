@@ -1,14 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SliderData } from "./SliderData";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa"
+let count=0;
 const ImageSlider = ({ slide }) => {
     const [current, setCurrent] = useState(0);
-    const length = slide.length
+  
     const nextSlide = () => {
-        setCurrent(current == length - 1 ? 0 : current + 1)
+
+     count=(count+1)% slide.length
+    setCurrent(count)
     }
     const prevSlide = () => {
-        setCurrent(current == 0 ? length - 1 : current - 1)
+        const prevLength=slide.length;
+  count=(current+prevLength-1)% prevLength;
+    setCurrent(count)
+    }
+
+    useEffect(()=>{
+     startSlider();
+    },[])
+    const startSlider=()=>{
+        setInterval(()=>{
+          nextSlide();
+        },3000)
     }
     return (
         <>
