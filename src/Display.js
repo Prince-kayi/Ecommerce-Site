@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FaCaretDown, FaHeart, FaShoppingCart, FaSearch, FaCaretRight } from "react-icons/fa"
 import { Link} from 'react-router-dom';
 import Acc from './Acc';
-const Display = () => {
+const Display = ({setShow}) => {
   const [accDrop, setDrop]=useState(false)
 
   return (
@@ -33,7 +33,9 @@ const Display = () => {
            </li> 
            
            <li className='heart'><Link to="/lists"><FaHeart /></Link></li> 
-            <li className='shopin'><Link to="/cart"><FaShoppingCart /></Link></li>
+           <div className='fa-cart'>
+            <li className='shopin' onClick={()=>setShow(true)}><Link to="/cart"><FaShoppingCart  /> <span className='art'>0</span></Link>   </li>  
+            </div> 
           </ul>
         </div>
       </nav>
@@ -69,7 +71,7 @@ const Display = () => {
         <input type="text"
           placeholder="Search for products,brand..."
           name="look"
-          size="130" 
+          size="135" 
           />
         <select>
           <option>All Departments</option>

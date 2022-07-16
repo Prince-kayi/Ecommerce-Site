@@ -1,18 +1,12 @@
 import React, { useState } from 'react'
 import AccList from "./AccList"
-import { BrowserRouter,Link } from 'react-router-dom'
+import {Link } from 'react-router-dom'
 
  const Acc=()=> {
-    
      const[click, setClick]=useState(false)
-     
     const handleClick =()=>setClick(!click)
-    
-  return (
-     
+  return ( 
     <div>
-       
-        
       <ul onClick={handleClick} className={click ? "menu-active":"Menu"} >
        {AccList.map((item,index)=>{
            return(
@@ -20,15 +14,10 @@ import { BrowserRouter,Link } from 'react-router-dom'
             <Link to={item.path} className={item.Cname} onClick={() => setClick(false)}>
                 {item.title}
             </Link>
-
         </li>
-               
-           )
-
-       })}
-          
-    </ul>
-     
+    )
+       })}     
+    </ul> 
     </div>
    
   );

@@ -112,8 +112,7 @@
     color:deepskyblue;    
 }
 .regi-bottom a:hover {
-    text-decoration: underline;
-  
+    text-decoration: underline; 
 }
 .boss {
     display: flex;
@@ -123,11 +122,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 63px;
+    margin-top: 23px;
     margin-left: -300px;
-}
-.boss input{
-    color: blue;
 }
 span {
     text-transform: capitalize;
@@ -143,8 +139,7 @@ span {
     font-size: 15px;
     color: red;
     margin-left: 30px;
-    margin-top: -20px;
-   
+    margin-top: -20px;  
   }
   .finally{
     width: 100%;

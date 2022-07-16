@@ -73,7 +73,7 @@ const Login = () => {
                </div>
                <div className="logi-bottom">
                   <button className="loggin" onClick={Show}> Login</button>
-                  <p>New to BuyAlot ? <a href="/registers"> Create account</a></p>
+                  <p>New to BuyAlot ? <a href="/register"> Create account</a></p>
                </div>
             </form>
          </div>
