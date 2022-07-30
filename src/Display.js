@@ -9,11 +9,11 @@ const Display = ({setShow}) => {
     <>
       <nav>
         <div className="logo">
-          <h3>BuyerAlot</h3>
+         <Link to="/" className='go'>BuyerAlot</Link> 
           <h5>com</h5>
         <div className=" Lheading">
           <ul className='rhead'>
-        <li className='rheadi'><Link to="/">Help</Link></li>  
+        <li className='rheadi'><Link to="#">Help</Link></li>  
         <li className='rheadi'>  <Link to="/sell">Sell on BuyerAlot</Link></li>
        </ul>
        </div>

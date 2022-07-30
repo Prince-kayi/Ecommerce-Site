@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
 import "./Display.css"
 import Display from "./Display";
@@ -11,26 +11,26 @@ import Zfooter from "./Footer";
 import "./Footer.css"
 import Login from "./Pages/Login";
 import Cart from "./CART/Card";
-import { CartProvider } from "./CART/CartContext";
 import CardItems from "./CART/CardItems"
 const App = () => { 
+  const [cardItem,setCardItem]=useState([])
   return (
     <>
-  <CartProvider>
+
     <BrowserRouter>
       <Display />
+      <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+         
+        </Routes> 
       <div className="ko">
         <ImageSlider slide={SliderData}   /> 
         <div className="second">  <ImageSlider slide={SliderData} />  </div>
         </div>
-         <CardItems />
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>      
-  <Zfooter />
+ <CardItems />
+              <Zfooter />
       </BrowserRouter>
-      </CartProvider>
     </>
   );
 }
