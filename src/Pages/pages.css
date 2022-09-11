@@ -1,8 +1,16 @@
 .loginn {
+    background-color: coral;
+    width: 760px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    border: 1px solid black;
+    margin-top: 50px;
+    margin-left:auto;
+    margin-right:auto;;
+    margin-bottom: 20px;
+    white-space: nowrap;
 }
 .login-wrap {
     display: flex;
@@ -13,10 +21,10 @@
 .login-form input {
     height: 27px;
     width: 500px;
-    margin: 30px;
+    margin: 45px;
 }
 .login-form label {
-    margin-left: 30px;
+    margin-left: 47px;
     font-size: 15px;
     text-transform: capitalize;
 }
@@ -53,11 +61,18 @@
     text-decoration: underline;
 }
 .Regi {
+    background-color: rgb(94, 73, 80);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
     margin-left: 300px;
+    border: 1px solid black;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    width: 760px;
+    max-height: 1050px;
 }
 .regi-wrap {
     display: flex;
@@ -134,11 +149,12 @@ span {
 }
 .inn {
     margin-left: 35px;
+    margin-bottom: 30px;
 }
 .error-msg{
     font-size: 15px;
     color: red;
-    margin-left: 30px;
+    margin-left: 45px;
     margin-top: -20px;  
   }
   .finally{

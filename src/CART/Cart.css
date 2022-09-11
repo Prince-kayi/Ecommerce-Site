@@ -1,0 +1,275 @@
+.product{
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+margin: 20px auto;
+border-radius: 5px;
+background-color:hotpink;
+width: 80%;
+margin-left: 200px;
+margin-bottom: 20px;
+}
+.card{
+    width: 230px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius:5px;
+    padding: 10px;
+    margin: 40px 20px;
+    background-color: white;
+   
+}
+.card:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+.images{
+    width: 100%;
+    max-width: 300px;
+    min-height: 200px;
+    display: block;
+    object-fit: cover;
+}
+.product-name{
+    text-transform: uppercase;
+    margin: 10px 0px;
+}
+.product-price{
+    margin: 10px 0px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 30px;
+}
+.card:hover .aries {
+    color: white;
+    background-color: red;
+  }
+.aries:active{
+    transform: translateY(3px);
+  }
+  .aries {
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    background: transparent;
+    color: red;
+    border: 2px solid red;
+    transition: background 200ms ease-in, color 200ms ease-in;
+    cursor: pointer;
+    width: 200px;
+  }
+  .shop{
+    position: relative;
+    margin-top: 380px;
+    height: 38px;
+    width: 210px;
+    background-color: black;
+    color: white; 
+    margin-left: 20px;  
+  }
+  .depart{
+    margin-top: 0px;
+    list-style-type: none;
+    background-color: blueviolet;
+    display: block;
+    padding: -20px;
+   margin-left: 23px;
+  }
+  .angle{
+    float: right;
+  }
+  .logo {
+    display: flex;
+    margin-right:550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;  
+}
+.logo a{
+    text-decoration: none;
+  color: black;
+}
+.go{
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+.Lheading {
+    margin-left: -17px;
+}
+.Rheading{
+  margin-left: -485px;
+}
+.rhead {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+.depart li:hover .sub-menu-9{
+  display: block;
+  position: absolute;
+  background-color: blueviolet;
+  margin-top: -15px;
+  margin-left: 207px;
+  width: 200px;
+}
+.depart li:hover .sub-menu-9 ul{
+  display: block;
+  padding: 15px;
+}
+.depart li:hover .sub-menu-9 ul li{
+  width: 160px;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px dotted #fff;  
+}
+.sub-menu-9 ul li a{
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+}
+.depart li:hover .sub-menu-10{
+  display: block;
+  position: absolute;
+  background-color: blueviolet;
+  margin-top: -15px;
+  margin-left: 207px;
+  width: 200px;
+}
+.depart li:hover .sub-menu-10 ul{
+  display: block;
+  padding: 15px;
+}
+.depart li:hover .sub-menu-10 ul li{
+  width: 160px;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px dotted #fff;  
+}
+.sub-menu-10 ul li a{
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+}
+.depart li:hover .sub-menu-11{
+  display: block;
+  position: absolute;
+  background-color: blueviolet;
+  margin-top: -15px;
+  margin-left: 207px;
+  width: 230px;
+}
+.depart li:hover .sub-menu-11 ul{
+  display: block;
+  padding: 15px;
+}
+.depart li:hover .sub-menu-11 ul li{
+  width: 160px;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px dotted #fff;  
+}
+.sub-menu-11 ul li a{
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+}
+.depart li:hover .sub-menu-12{
+  display: block;
+  position: absolute;
+  background-color: blueviolet;
+  margin-top: -15px;
+  margin-left: 207px;
+  width: 200px;
+}
+.depart li:hover .sub-menu-12 ul{
+  display: block;
+  padding: 15px;
+}
+.depart li:hover .sub-menu-12 ul li{
+  width: 160px;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px dotted #fff;  
+}
+.sub-menu-12 ul li a{
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+}
+.depart li:hover .sub-menu-13{
+  display: block;
+  position: absolute;
+  background-color: blueviolet;
+  margin-top: -15px;
+  margin-left: 207px;
+  width: 200px;
+}
+.depart li:hover .sub-menu-13 ul{
+  display: block;
+  padding: 15px;
+}
+.depart li:hover .sub-menu-13 ul li{
+  width: 160px;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px dotted #fff;  
+}
+.sub-menu-13 ul li a{
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+}
+.depart li:hover .sub-menu-14{
+  display: block;
+  position: absolute;
+  background-color: blueviolet;
+  margin-top: -15px;
+  margin-left: 207px;
+  width: 200px;
+}
+.depart li:hover .sub-menu-14 ul{
+  display: block;
+  padding: 15px;
+}
+.depart li:hover .sub-menu-14 ul li{
+  width: 160px;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px dotted #fff;  
+}
+.sub-menu-14 ul li a{
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+}
+.depart li:hover .sub-menu-15{
+  display: block;
+  position: absolute;
+  background-color: blueviolet;
+  margin-top: -15px;
+  margin-left: 207px;
+  width: 200px;
+}
+.depart li:hover .sub-menu-15 ul{
+  display: block;
+  padding: 15px;
+}
+.depart li:hover .sub-menu-15 ul li{
+  width: 160px;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px dotted #fff;  
+}
+.sub-menu-15 ul li a{
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+}
+  

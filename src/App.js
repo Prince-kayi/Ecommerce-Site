@@ -1,35 +1,53 @@
 import React, { useState } from "react";
 import './App.css';
 import "./Display.css"
-import Display from "./Display";
 import "./Pages/pages.css";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Register from "./Pages/Register";
-import ImageSlider from "./ImageSlider";
-import { SliderData } from "./SliderData";
+import { BrowserRouter} from "react-router-dom";
 import Zfooter from "./Footer";
 import "./Footer.css"
-import Login from "./Pages/Login";
-import Cart from "./CART/Card";
-import CardItems from "./CART/CardItems"
+import Header from "./CART/Cart";
+import Goods from "./CART/CardList";
+import Routez from "./CART/CardItems";
 const App = () => { 
   const [cardItem,setCardItem]=useState([])
+  const {CardList}=Goods;
+  const AddToCart =(things)=>{
+    const ExistThings=cardItem.find((item)=>item.id === things.id);
+    if(ExistThings){
+      setCardItem(cardItem.map((item)=> item.id ===things.id ?
+       {...ExistThings,quantity:ExistThings.quantity+1}:item)
+      )
+    }
+      else{
+         setCardItem([...cardItem,{...things,quantity:1}])
+      }
+  }
+  const RemoveItems=(things)=>{
+    const ExistThings=cardItem.find((item)=>item.id === things.id);
+    if(ExistThings.quantity===1){
+      setCardItem(cardItem.filter((item)=>item.id !== things.id))
+    }
+    else{
+      setCardItem(
+        cardItem.map((item)=>item.id===things.id?
+        {...ExistThings,quantity:ExistThings.quantity-1}:item)
+      )
+    }
+  }
+  const ClearCart=()=>{
+    setCardItem([]);
+  }
   return (
     <>
-
     <BrowserRouter>
-      <Display />
-      <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-         
-        </Routes> 
-      <div className="ko">
-        <ImageSlider slide={SliderData}   /> 
-        <div className="second">  <ImageSlider slide={SliderData} />  </div>
-        </div>
- <CardItems />
-              <Zfooter />
+    <Header cardItem={cardItem}  />
+    <Routez CardList={CardList} 
+    cardItem={cardItem} 
+    AddToCart={AddToCart}
+    RemoveItems={RemoveItems}
+     ClearCart={ClearCart}
+    />
+    <Zfooter />
       </BrowserRouter>
     </>
   );

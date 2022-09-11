@@ -60,12 +60,12 @@ const Login = () => {
             <form className="login-form" onSubmit={Submit}>
             {successMsg &&<div className='finally'>{successMsg}</div>}
                <h1 className="inn"> Login</h1>
-               <label>Email address </label>
+               <label>Email address: </label>
                   <div className="ad">
                      <input type="text" name="emailAddress" onChange={Changer} value={Loginform.emailAddress} />
                 {!!error.emailAddress&&<div className="error-msg">{error.emailAddress}</div>}
                   </div> 
-               <label> Password </label>
+               <label> Password: </label>
              <a href="/forgotPass" className="fogot">Forgot password?</a>
               <div className="ad">  
                   <input type="password" name="password" onChange={Changer} value={Loginform.password} />

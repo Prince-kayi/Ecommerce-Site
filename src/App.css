@@ -8,7 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 80%;
+  margin-right: -20px;
 }
 .image {
   position: relative;
@@ -16,14 +17,15 @@
   width: 405px;
   height: 300px;
   border-radius: 10px;
-  left: -75px;
-  margin-bottom: 250px;
-  cursor: pointer;
+  left: -145px;
+  margin-bottom: 5px;
+  cursor: pointer; 
+  z-index: 999;
 }
 .right-arrow {
   position: relative;
-  top: -245px;
-  right: -365px;
+  top: -125px;
+  right: -287px;
   font-size: 2rem;
   color: blue;
   z-index: 1;
@@ -32,8 +34,8 @@
 }
 .left-arrow {
   position: relative;
-  top: -245px;
-  left: -60px;
+  top: -125px;
+  left: -135px;
   font-size: 2rem;
   color: blue;
   z-index: 1;
@@ -48,50 +50,6 @@
   opacity: 1;
   transition-duration: 1.3ms;
   transform: scale(1.10);
-}
-.cards {
-  overflow: hidden;
-  display: flex;
-  box-shadow: 0 2px 20px gray;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  transition: 200ms ease-in;
-  height: 450px;
-}
-.card-ima {
-  height: 15rem;
-  width: 100%;
-}
-.card-title {
-  padding: 0.1rem;
-  font-weight: lighter;
-}
-.card-desc {
-  padding: 0 1rem;
-  font-weight: bolder;
-}
-.aries {
-  padding: 1rem;
-  font-family: inherit;
-  font-weight: bold;
-  font-size: 1rem;
-  margin: 1rem;
-  background: transparent;
-  color: red;
-  border: 2px solid red;
-  transition: background 200ms ease-in, color 200ms ease-in;
-  cursor: pointer;
-}
-.cards:hover .aries {
-  color: white;
-  background-color: red;
-}
-.cards:hover {
-  transform: scale(1.02);
-}
-.cards .aries:active{
-  transform: translateY(2px);
 }
 .access {
   display: flex;
@@ -113,6 +71,7 @@
   display: flex;
   justify-content: flex-start;
   margin-left: 350px;
+  z-index: 999;
 }
 .wrap{
 margin-top:-180px; 
@@ -134,3 +93,25 @@ justify-content: center;
 .shopin a{
   text-decoration: none;
 }
+.second{
+  margin-left: 30px;
+}
+.second .right-arrow{
+  position: relative;
+  top: -125px;
+  font-size: 6rem;
+  color: blue;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+}
+.second .left-arrow {
+  position: relative;
+  top: -125px;
+  font-size: 6rem;
+  color: blue;
+  z-index: 1;
+  cursor: pointer;
+  user-select: none;
+}
+

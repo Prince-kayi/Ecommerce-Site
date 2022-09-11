@@ -1,16 +1,33 @@
 import React,{useState} from "react";
-import { CartContext } from "./CartContext";
- const Card=({item,handle})=> {
-    const{id,title,img,desc}=item;
-    return (
-        <>     
-            <div className="cards">
-                <div className="card_body">
-                    <img src={img} className="card-ima" />
-                    <h2 className="card-title">{title}</h2>
-                    <p className="card-desc">{desc}</p>
+import './Cart.css'
+import { SliderData } from "../Pages/SliderData";
+import ImageSlider from "../Pages/ImageSlider";
+ const Card=({CardList,AddToCart})=> {
+return (
+        <>    
+        <div className="ko">
+        <ImageSlider slide={SliderData}   /> 
+        <div className="second">  <ImageSlider slide={SliderData} />  </div>
+        </div> 
+            <div className="product">
+                {CardList.map((cardLists)=>(
+                <div className="card">
+                   <div>
+                    <img src={cardLists.imag} alt={cardLists.name}  className="images"/>
+                   </div>
+                <div>
+                 <h4 className="product-name">
+                  {cardLists.title}
+                 </h4>
                 </div>
-                <button className="aries" onClick={()=>handle(item)}>Add to Cart</button>
+                <div>
+                <h4 className="product-price" >
+                   ${cardLists.desc}
+                </h4>
+                </div>
+                <button className="aries"onClick={()=>AddToCart(cardLists)}>Add to Cart</button>  
+                </div>
+                ))}
             </div>
         </>
     );
