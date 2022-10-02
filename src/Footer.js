@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, Link}from "react-router-dom"
+import {Link}from "react-router-dom"
 import { FaCcVisa, FaCcMastercard, FaCcPaypal, FaAmazonPay, FaCcDiscover,FaCcDinersClub, FaApple } from "react-icons/fa"
 import { FaFacebook,FaTwitter, FaInstagram, FaLinkedinIn,FaYoutube,FaGooglePlay} from "react-icons/fa";
 const Zfooter=()=>{

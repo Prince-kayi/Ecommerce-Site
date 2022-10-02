@@ -16,8 +16,7 @@ margin-bottom: 20px;
     border-radius:5px;
     padding: 10px;
     margin: 40px 20px;
-    background-color: white;
-   
+    background-color: white; 
 }
 .card:hover {
     transform: scale(1.02);
@@ -272,4 +271,4 @@ margin-bottom: 20px;
   padding: 20px;
   color: white;
 }
-  
+

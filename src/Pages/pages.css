@@ -7,8 +7,9 @@
     align-items: center;
     border: 1px solid black;
     margin-top: 50px;
-    margin-left:auto;
-    margin-right:auto;;
+    margin-left: auto;
+    margin-right: auto;
+    ;
     margin-bottom: 20px;
     white-space: nowrap;
 }
@@ -69,8 +70,8 @@
     border: 1px solid black;
     margin-top: 40px;
     margin-bottom: 20px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 760px;
     max-height: 1050px;
 }
@@ -124,10 +125,10 @@
 .regi-bottom a {
     text-decoration: none;
     text-transform: capitalize;
-    color:deepskyblue;    
+    color: deepskyblue;
 }
 .regi-bottom a:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 .boss {
     display: flex;
@@ -151,33 +152,33 @@ span {
     margin-left: 35px;
     margin-bottom: 30px;
 }
-.error-msg{
+.error-msg {
     font-size: 15px;
     color: red;
     margin-left: 45px;
-    margin-top: -20px;  
-  }
-  .finally{
+    margin-top: -20px;
+}
+.finally {
     width: 100%;
-  background-color: aqua;
-  color: white;
-  font-weight: 800;
-  padding: 25px;
-  }
-  .fogot{
+    background-color: aqua;
+    color: white;
+    font-weight: 800;
+    padding: 25px;
+}
+.fogot {
     position: relative;
     margin-left: 320px;
     text-decoration: none;
     cursor: pointer;
     color: blue;
-  }
-.fogot:hover{
+}
+.fogot:hover {
     text-decoration: underline;
-  }
-  .invalid{
-    border:1px solid #ff0000
-  }
- .second{
+}
+.invalid {
+    border: 1px solid #ff0000
+}
+.second {
     position: relative;
-   right: -45px;
-  }
+    right: -45px;
+}

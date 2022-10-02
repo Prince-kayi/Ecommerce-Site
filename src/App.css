@@ -1,9 +1,9 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 .slider {
-  margin-top: 250px;
+  margin-top: 320px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -19,7 +19,7 @@
   border-radius: 10px;
   left: -145px;
   margin-bottom: 5px;
-  cursor: pointer; 
+  cursor: pointer;
   z-index: 999;
 }
 .right-arrow {
@@ -73,30 +73,30 @@
   margin-left: 350px;
   z-index: 999;
 }
-.wrap{
-margin-top:-180px; 
-display: grid;
-width: 90%;
-grid-template-columns: auto;
-grid-template-columns: repeat(auto-fit, minmax(20rem, 20rem));
-gap: 4rem;
-justify-content: center;
+.wrap {
+  margin-top: -180px;
+  display: grid;
+  width: 90%;
+  grid-template-columns: auto;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 20rem));
+  gap: 4rem;
+  justify-content: center;
 }
-.art{
-  background-color:blue;
+.art {
+  background-color: blue;
   color: blanchedalmond;
   position: relative;
-  left:-5px;
+  left: -5px;
   border-radius: 35px;
-  top:-13px; 
+  top: -13px;
 }
-.shopin a{
+.shopin a {
   text-decoration: none;
 }
-.second{
+.second {
   margin-left: 30px;
 }
-.second .right-arrow{
+.second .right-arrow {
   position: relative;
   top: -125px;
   font-size: 6rem;
@@ -114,4 +114,18 @@ justify-content: center;
   cursor: pointer;
   user-select: none;
 }
-
+@media screen and (max-width:820px) {
+  .logo {
+    position: relative;
+    margin-left: 90px;
+  }
+  .second {
+    display: none;
+  }
+  .image {
+    margin-top: -90px;
+    width: 400px;
+    height: 250px;
+    margin-left: -15px;
+  }
+}
