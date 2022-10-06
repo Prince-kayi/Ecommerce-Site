@@ -64,15 +64,17 @@ ul{
    text-align: center;
    line-height: 40px;
     transition: all 0.5s ease;
+    font-size: 1.8rem;
 }
 .foot2 a:hover{
     color: #24262b;
    background-color: whitesmoke;   
 }
 .middle-bot a{
-    margin-right: 30px;
+    margin-right: 10px;
     color:cornsilk;
     text-decoration: none;   
+    z-index: 999;
 }
 .middle-bot a:hover{
     text-decoration: underline;
@@ -99,7 +101,10 @@ color: white;
 .join a{
     margin-right: 20px;
     color: whitesmoke;
-    font-size: 2rem;
+    font-size: 3rem;  
+}
+.join{
+     margin-top: 20px;
 }
 .join a:hover{
 color: blueviolet;
@@ -142,5 +147,10 @@ color: blueviolet;
     .right{
         margin-left: 80px;
     }
-
+    .linkss{
+        display: none;
+    }
+    .ap{
+        display: flex;
+    }
 }

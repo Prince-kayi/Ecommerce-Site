@@ -101,19 +101,19 @@ else {
                       <input type="text" name="firstName" onChange={handlerChange} value={forms.firstName} 
                        />
                     </label>
-                     {!!errors.firstName &&<div className="error-msg">{errors.firstName}</div>}
+                     {!!errors.firstName &&<div className="errors-msg">{errors.firstName}</div>}
                     </div>
                     <div  className="reg-form-in">
                     <label>
                  Last Name*:     <input type="text" name="lastName" onChange={handlerChange} value={forms.lastName}/>
                     </label>
-                    {!!errors.lastName && <div className="error-msg">{errors.lastName}</div>}
+                    {!!errors.lastName && <div className="errors-msg">{errors.lastName}</div>}
                     </div>
                     <div className="reg-form-in">
                     <label>
                  Email*:     <input type="text" name="email" onChange={handlerChange} value={forms.email} />
                     </label>
-                    {!!errors.email && <div className="error-msg">{errors.email}</div>}
+                    {!!errors.email && <div className="errors-msg">{errors.email}</div>}
                     </div>
                     <div className="reg-form-in">
                     <label>
@@ -124,7 +124,7 @@ else {
                     <label>
                  Password*:     <input type="text" name="password" onChange={handlerChange}  value={forms.password} />
                     </label>
-                    {!!errors.password &&<div className="error-msg">{errors.password}</div>}
+                    {!!errors.password &&<div className="errors-msg">{errors.password}</div>}
                     </div>
                     <div className="reg-form-in">
                     <label>
@@ -135,7 +135,7 @@ else {
                     <label>
                 Mobile Number*:     <input type="text" name="Mnumber" onChange={handlerChange} value={forms.Mnumber}  />
                     </label>
-                    {!!errors.Mnumber && <div className="error-msg">{errors.Mnumber}</div>}
+                    {!!errors.Mnumber && <div className="errors-msg">{errors.Mnumber}</div>}
            </div>
            <div className="boss">
                <div>
@@ -206,7 +206,7 @@ else {
                <div className="regi-bottom">
                    <p>You will receive newsletters based on your interests, recent orders and browsing behaviour.</p>
                    <button className="register-now" onClick={ShowResults}> Register Now</button>
-                    <p>By clicking on 'Register Now', you agree to our <a href="/terms">Terms and Conditions</a> and confirm that you are over 18 years of age</p>
+                    <div className="terms">By clicking on 'Register Now', you agree to our <a href="/terms">Terms and Conditions</a> and confirm that you are over 18 years of age</div>
                </div>
            </div>
                 </form>

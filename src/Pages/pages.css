@@ -9,7 +9,6 @@
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    ;
     margin-bottom: 20px;
     white-space: nowrap;
 }
@@ -158,6 +157,12 @@ span {
     margin-left: 45px;
     margin-top: -20px;
 }
+.errors-msg {
+    font-size: 15px;
+    color: red;
+    margin-left: 30px;
+    margin-top: -20px;
+}
 .finally {
     width: 100%;
     background-color: aqua;
@@ -181,4 +186,88 @@ span {
 .second {
     position: relative;
     right: -45px;
+}
+@media (max-width:820px) {
+    .loginn{
+    width: 400px;
+    height: 400px;
+    }
+    .login-form input {
+        height: 27px;
+        width: 350px;
+        margin: 45px;
+        margin-left: 30px;
+    }
+    .login-form label {
+        margin-left: 30px;
+        font-size: 15px;
+    }
+    .fogot {
+        margin-left: 160px;
+        
+    }
+    .loggin{
+        margin-left: 10px;
+        width: 370px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+    }
+    .logi-bottom{
+        margin-bottom: 60px;
+
+    }
+    .inn{
+        margin-top: 50px;
+    }
+    .error-msg {
+        margin-top: -40px;
+        margin-bottom: 15px;
+        margin-left: 30px;
+    }
+    .Regi {
+        width: 400px;
+        max-height: 500px;
+    }
+    .reg-form {
+        margin-top: 20px;
+          margin-bottom: 7px;
+    }
+    .reg-form-in {
+        margin-left: -145px;
+        margin-top: 2px; 
+    }
+    .reg-form-in label {
+        margin-left: 150px;
+    }
+    .reg-form-in input {
+        margin-left: 270px;
+        width: 260px;
+        margin-top: 7px;
+        height: 27px;
+    }
+    .boss input,span,h4{
+        display: none;
+    }
+    .regi-bottom p {
+       display: none;
+    }
+    .bos{
+        display: none;
+    }
+    .terms{
+        font-size: 13px;
+        text-align: left;
+    }
+    .register-now {
+        width: 370px;
+        border-radius: 20px;
+        margin-bottom: 15px;
+        margin-left: -14px; 
+    }
+    .errors-msg{
+        margin-top: -30px;
+        margin-bottom: 20px;
+        margin-left:150px;
+    }
+
 }

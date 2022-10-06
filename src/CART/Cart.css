@@ -69,12 +69,11 @@ margin-bottom: 20px;
     margin-left: 20px;  
   }
   .depart{
-    margin-top: 0px;
     list-style-type: none;
     background-color: blueviolet;
     display: block;
     padding: -20px;
-   margin-left: 23px;
+    margin-left: 23px;
   }
   .angle{
     float: right;
@@ -98,10 +97,9 @@ margin-bottom: 20px;
     white-space: nowrap;
 }
 .Lheading {
-    margin-left: -17px;
-}
-.Rheading{
-  margin-left: -485px;
+  position:sticky;
+  margin-left: -17px;
+  z-index: 999;
 }
 .rhead {
     list-style: none;
