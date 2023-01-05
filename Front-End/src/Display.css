@@ -4,17 +4,15 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    white-space: nowrap;
     width: 100%;
     z-index: 999;
     background-color: rgb(84, 90, 90);
-    margin: 0 auto;
 }
 .menu-links {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: -530px;
+    margin-left: -550px;
 }
 .menu-links a {
     margin: 20px;

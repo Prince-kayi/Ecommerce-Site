@@ -82,11 +82,10 @@ return(
 <Link to="/music">Music /</Link>
 <Link to="/movies"> Movies & Series /</Link>
 <Link to="/office"> Office & Stationary /</Link>
-<Link to="/pets"> Pets /</Link>
-<Link to="/tv"> Tv /</Link>
-<Link to="/sports"> Sports /</Link>
+<Link to="/pets"> Pets/</Link>
+<Link to="/tv"> TV /</Link>
+<Link to="/sport"> Sport /</Link>
 <Link to="/toys"> Toys /</Link>
-<Link to="/vouchers"> Vouchers /</Link>
 </div>
 <div className="payment">
 <FaCcVisa className="pay"/>

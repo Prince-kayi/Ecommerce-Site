@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios"
 const Login = () => {
    const [Loginform, setLForm] = useState({
       emailAddress: " ",
@@ -36,29 +37,25 @@ const Login = () => {
             ...LoginForm,
             emailAddress:" "
             }));   
-        if(!Loginform.password.includes("@")){
-         setErrors((LoginForm)=>({
-         ...LoginForm,
-         password:"password does not match"
-         }));  
-        }
-        else{
-         setErrors((LoginForm)=>({
-            ...LoginForm,
-            password:" "
-            }));
- return setMsg("you have successfully logged in"); 
-         }
-      }
+         }  
    }
    const Show = () => {
       console.log("LoginForm", Loginform)
+       const signed={
+         emailAddress:Loginform.emailAddress,
+         password:Loginform.password
+       }
+       axios.post("http://localhost:1789/kai/signin",signed)
+       .then(res=> console.log(res.data))
+       setLForm({
+         emailAddress: " ",
+         password: " "
+       })
    }
    return (
       <div className="loginn">
          <div className="login-wrap">
             <form className="login-form" onSubmit={Submit}>
-            {successMsg &&<div className='finally'>{successMsg}</div>}
                <h1 className="inn"> Login</h1>
                <label>Email address: </label>
                   <div className="ad">

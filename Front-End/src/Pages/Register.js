@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import axios from "axios"
 const Register=()=>{
      const [forms,setForms]=useState({
          firstName:" ",
@@ -27,9 +28,7 @@ const Register=()=>{
                      [name]:type==="checkbox"? checked:value
              }))
      }
-     const ShowResults=()=>{
-         console.log("forms",forms)
-     }
+    
      //validate form
      const onSubmit=(e)=>{
          e.preventDefault();
@@ -52,44 +51,34 @@ const Register=()=>{
                 firstName:" ",
                 lastName: " "    
             }))          
-     }   
-  if(!forms.email.includes("@")) {
-    setError((forms)=>({
-        ...forms,
-        email:" enter valid email address"
-    }))       
-}
-else {
-    setError((forms)=>({
-        ...forms,
-        email:" "
-    }))       
-}
-if(forms.password.length < 5) {
-    setError((forms)=>({
-        ...forms,
-        password:" password is too shot"
-    }))       
-}
-else {
-    setError((forms)=>({
-        ...forms,
-        password:" "
-    }))       
-}
-if(forms.Mnumber.length < 10) {
-    setError((forms)=>({
-        ...forms,
-        Mnumber:" Mobile/Phone number must be 10 digits"
-    }))       
-}
-else {
-    setError((forms)=>({
-        ...forms,
-        Mnumber:" "
-    }))       
-}
-    }
+     } 
+    }  
+  const ShowResults=()=>{
+         console.log("forms",forms)
+         const registered={
+            firstName:forms.firstName,
+            lastName:forms.lastName,
+            email:forms.email,
+            retypeEmail:forms.retypeEmail,
+            password:forms.password,
+            retypePassword:forms.retypePassword,
+            Mnumber:forms.Mnumber,
+            choice:forms.choice,
+         }
+         axios.post("http://localhost:1789/kai/signup",registered)
+         .then(res=>console.log(res.data))
+         setForms({
+            firstName:" ",
+            lastName:" ",
+            email: " ",
+            retypeEmail: " ",
+            password: " ",
+            retypePassword: " ",
+            Mnumber:" ",
+            choice: false,
+         })
+     }
+    
     return(
         <>
         <div className="Regi">
@@ -122,13 +111,13 @@ else {
                     </div>
                     <div className="reg-form-in">
                     <label>
-                 Password*:     <input type="text" name="password" onChange={handlerChange}  value={forms.password} />
+                 Password*:     <input type="password" name="password" onChange={handlerChange}  value={forms.password} />
                     </label>
                     {!!errors.password &&<div className="errors-msg">{errors.password}</div>}
                     </div>
                     <div className="reg-form-in">
                     <label>
-                Retype Password*:     <input type="text" name="retypePassword" onChange={handlerChange} value={forms.retypePassword}/>
+                Retype Password*:     <input type="password" name="retypePassword" onChange={handlerChange} value={forms.retypePassword}/>
                     </label>
                     </div>
                     <div className="reg-form-in">
