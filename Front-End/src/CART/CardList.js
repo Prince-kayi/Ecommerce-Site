@@ -117,11 +117,6 @@ CardList:[
   title:"quad Bike",
   desc:"1100"
 },
-{  id:"21",
-  imag:"https://i.pinimg.com/736x/71/84/bd/7184bd8796e7c0e5e7924befed57f61f--gucci-purses-gucci-handbags.jpg",
-  title:"hand bag",
-  desc:"2000"
-}
 ]
 
 }
