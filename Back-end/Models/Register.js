@@ -12,7 +12,7 @@ const SignUpSchema= new Schema({
     },
     email:{
         type:String,
-        required:true
+        unique:true
     },
     retypeEmail:{
         type:String,

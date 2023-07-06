@@ -1,72 +1,57 @@
 import React, { useState } from "react";
-import axios from "axios"
 const Login = () => {
    const [Loginform, setLForm] = useState({
-      emailAddress: " ",
+      email: " ",
       password: " "
    })
-   const [error,setErrors]=useState({
-      emailAddress: " ",
-      password: " "
-   })
-   const[successMsg,setMsg]=useState("");
    const Changer = (e) => {
       const Newdata = { ...Loginform }
       Newdata[e.target.name] = e.target.value
       setLForm(Newdata)
    }
-   const Submit = (e) => {
+   const Show = (e) => {
       e.preventDefault();
-      if(Loginform.emailAddress===" " || Loginform.password===""){
-         setErrors((LoginForm)=>({
-         ...LoginForm,
-         emailAddress:"Please enter your email address",
-         password:"Please enter  your password"
-         }));
-         return; 
-        }
-        if(!Loginform.emailAddress.includes("@")){
-         setErrors((LoginForm)=>({
-         ...LoginForm,
-         emailAddress:"Invalid email"
-         }));
-         return; 
-        }
-        else{
-         setErrors((LoginForm)=>({
-            ...LoginForm,
-            emailAddress:" "
-            }));   
-         }  
+      const{email,password}=Loginform
+      console.log(email,password)
+      fetch("http://localhost:1789/kai/signIn",{
+        method: "POST",
+        crossDomain: true,
+        headers:{
+          "Content-Type": "application/json",
+          Accept:"application/json",
+          "Access-Control-Allow-Origin":"*",
+        },
+        body: JSON.stringify({
+         email,
+         password
+        
+        }),
+  })
+  .then((res)=>res.json())
+  .then((data)=>{
+   console.log(data,"Loginform")
+   if(data.status==="ok"){
+      alert("login sucessfully")
+      window.localStorage.setItem("token",data.data);
+      window.localStorage.setItem("loggedIn",true);
+      window.location.href="./slider"
    }
-   const Show = () => {
-      console.log("LoginForm", Loginform)
-       const signed={
-         emailAddress:Loginform.emailAddress,
-         password:Loginform.password
-       }
-       axios.post("http://localhost:1789/kai/signin",signed)
-       .then(res=> console.log(res.data))
-       setLForm({
-         emailAddress: " ",
-         password: " "
-       })
+   
+  })
    }
    return (
       <div className="loginn">
          <div className="login-wrap">
-            <form className="login-form" onSubmit={Submit}>
+            <form className="login-form" onSubmit={Show}>
                <h1 className="inn"> Login</h1>
                <label>Email address: </label>
                   <div className="ad">
-                     <input type="text" name="emailAddress" onChange={Changer} value={Loginform.emailAddress} />
-                {!!error.emailAddress&&<div className="error-msg">{error.emailAddress}</div>}
+                     <input type="text" name="email" onChange={Changer} value={Loginform.email} />
                   </div> 
                <label> Password: </label>
-             <a href="/forgotPass" className="fogot">Forgot password?</a>
+             <a href="/forgotPass" className="fogot">Forgot Password?</a>
               <div className="ad">  
                   <input type="password" name="password" onChange={Changer} value={Loginform.password} />
-                  {!!error.password &&<div className="error-msg">{error.password}</div>}
                </div>
                <div className="logi-bottom">
                   <button className="loggin" onClick={Show}> Login</button>
