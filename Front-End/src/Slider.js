@@ -22,7 +22,7 @@ const Slider=()=> {
     console.log(data,"userData");
     setUserdatas({userDatas:data.data});
     if(data.data==="token expired"){
-      alert("Token has expired")
+    
       window.localStorage.clear();
        window.location.href="/login"
 
