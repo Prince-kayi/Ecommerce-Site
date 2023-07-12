@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.abel{
+  font-size: 50px;
+  margin-bottom: 50px;
+  color: white;
+}
+.adi{
+  margin-bottom: 30px;
+}
+.fogt{
+  margin-top: 20px;
+  margin-left: 150px;
+}
+.fogt a:hover{
+  text-decoration: underline;
+}

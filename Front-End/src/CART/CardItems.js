@@ -6,6 +6,7 @@ import Register from "../Pages/Register"
 import CartContext from "../CART/CartContext";
 import WishList from '../Pages/WishList';
 import Slider from '../Slider';
+import Remember from '../Pages/Remember';
 const isLoggedIn = window.localStorage.getItem("LoggedIn")
 const Routez = ({CardList,cardItem, AddToCart,RemoveItems,ClearCart}) => {
   return (
@@ -16,6 +17,7 @@ const Routez = ({CardList,cardItem, AddToCart,RemoveItems,ClearCart}) => {
           <Route path="/register" element={<Register/>} />
           <Route path="/lists" element={<WishList/>} />
           <Route path="/slider" element={<Slider/>} />
+          <Route path="/forgot" element={<Remember/>}/>
           <Route path="/cart" element={<CartContext cardItem={cardItem} AddToCart={ AddToCart} 
            RemoveItems={RemoveItems} 
            ClearCart={ClearCart}

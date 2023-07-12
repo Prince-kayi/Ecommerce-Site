@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 const Login = () => {
    const [Loginform, setLForm] = useState({
       email: " ",
@@ -49,12 +50,18 @@ const Login = () => {
                      <input type="text" name="email" onChange={Changer} value={Loginform.email} />
                   </div> 
                <label> Password: </label>
-             <a href="/forgotPass" className="fogot">Forgot Password?</a>
+             <Link to="/forgot" className="fogot">Forgot Password?</Link>
               <div className="ad">  
                   <input type="password" name="password" onChange={Changer} value={Loginform.password} />
                </div>
                <div className="logi-bottom">
                   <button className="loggin" onClick={Show}> Login</button>
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
                   <p>New to BuyAlot ? <a href="/register"> Create account</a></p>
                </div>
             </form>

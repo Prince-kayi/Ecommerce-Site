@@ -34,10 +34,23 @@ const Slider=()=> {
        window.location.href="/login"
      }
   return (
-    <div className="unity">
-     Name<h1>{userDatas.userDatas.firstName}</h1>
-     Email<h1>{userDatas.userDatas.email}</h1>
+    <div className="loginn">
+      <div className="login-wrap">
+        <div className="sli">
+   <label className="abel">Name:</label>  
+   <div className="adi">
+     <h1>{userDatas.userDatas.firstName}</h1>
+   </div>
+     <label className="abel">Email:</label>
+     <div className="adi">
+     <h1>{userDatas.userDatas.email}</h1>
+     </div>   
+     
+     <div className="adi">
      <button onClick={logOut} className="register-now">Log Out</button>
+     </div>
+    </div>
+    </div>
     </div>
   )
 }
