@@ -17,7 +17,7 @@ const Routez = ({CardList,cardItem, AddToCart,RemoveItems,ClearCart}) => {
           <Route path="/register" element={<Register/>} />
           <Route path="/lists" element={<WishList/>} />
           <Route path="/slider" element={<Slider/>} />
-          <Route path="/forgot" element={<Remember/>}/>
+          <Route path="/forgotPass" element={<Remember/>}/>
           <Route path="/cart" element={<CartContext cardItem={cardItem} AddToCart={ AddToCart} 
            RemoveItems={RemoveItems} 
            ClearCart={ClearCart}

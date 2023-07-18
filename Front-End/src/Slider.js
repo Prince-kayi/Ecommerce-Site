@@ -1,10 +1,14 @@
 import { useState } from "react"
 import React from 'react'
+import HomeUser from "./Pages/HomeUser"
+import AdminHome from "./Pages/AdminHome"
 
 const Slider=()=> {
   const[userDatas,setUserdatas]=useState({
      userDatas:""
   })
+
+  const [admin,setAdmin]=useState(false)
   fetch("http://localhost:1789/kai/userData",{
         method: "POST",
         crossDomain: true,
@@ -20,6 +24,9 @@ const Slider=()=> {
   .then((res)=>res.json())
   .then((data)=>{
     console.log(data,"userData");
+    if(data.data.UserType==="Admin"){
+      setAdmin(true)
+    }
     setUserdatas({userDatas:data.data});
     if(data.data==="token expired"){
     
@@ -28,30 +35,14 @@ const Slider=()=> {
 
     }
   });
-
-     const logOut=()=>{
-       window.localStorage.clear();
-       window.location.href="/login"
-     }
   return (
     <div className="loginn">
-      <div className="login-wrap">
-        <div className="sli">
-   <label className="abel">Name:</label>  
-   <div className="adi">
-     <h1>{userDatas.userDatas.firstName}</h1>
+    <div className="login-wrap">
+      <div className="sli">
+   { admin ? <AdminHome />: <HomeUser userDatas={userDatas}/>}
    </div>
-     <label className="abel">Email:</label>
-     <div className="adi">
-     <h1>{userDatas.userDatas.email}</h1>
-     </div>   
-     
-     <div className="adi">
-     <button onClick={logOut} className="register-now">Log Out</button>
-     </div>
-    </div>
-    </div>
-    </div>
+   </div>
+   </div>
   )
 }
 export default Slider

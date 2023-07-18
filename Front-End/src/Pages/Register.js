@@ -1,5 +1,4 @@
 import React,{useState} from "react";
-import axios from "axios"
 const Register=()=>{
      const [forms,setForms]=useState({
          firstName:" ",
@@ -10,8 +9,9 @@ const Register=()=>{
          retypePassword: " ",
          Mnumber:" ",
          choice: false,
+         SecretKey:" ",
      })
-    
+     const [UserType,setUserType]=useState("")
      const handlerChange=(e)=>
      {
              const{name,value,type,checked}=e.target
@@ -23,38 +23,79 @@ const Register=()=>{
     
      //validate form
   const ShowResults=(e)=>{
+    if(UserType==="Admin" && forms.SecretKey!="botho29"){
+       e.preventDefault();
+        alert("inavlid Admin")
+    }
+    else{
     e.preventDefault();
-         console.log("forms",forms)
-         const registered={
-            firstName:forms.firstName,
-            lastName:forms.lastName,
-            email:forms.email,
-            retypeEmail:forms.retypeEmail,
-            password:forms.password,
-            retypePassword:forms.retypePassword,
-            Mnumber:forms.Mnumber,
-            choice:forms.choice,
-         }
-         axios.post("http://localhost:1789/kai/signUp",registered)
-         .then(res=>console.log(res.data))
-         setForms({
-            firstName:" ",
-            lastName:" ",
-            email: " ",
-            retypeEmail: " ",
-            password: " ",
-            retypePassword: " ",
-            Mnumber:" ",
-            choice: false,
+         const{email,password,firstName,lastName,Mnumber,retypeEmail,retypePassword,choice}=forms
+         console.log(forms)
+         fetch("http://localhost:1789/kai/signUp",{
+           method: "POST",
+           crossDomain: true,
+           headers:{
+             "Content-Type": "application/json",
+             Accept:"application/json",
+             "Access-Control-Allow-Origin":"*",
+           },
+           body: JSON.stringify({
+            email,
+            password,
+            lastName,
+            firstName,
+            Mnumber,
+            retypeEmail,
+            retypePassword,
+            UserType,
+            choice
+           }),
+     })
+         .then((res)=>res.json())
+         .then((data)=>{
+          console.log(data,"forms")
+          if(data.status==="ok"){
+            alert("registration successfull")
+             }
+             else
+             alert("something went wrong")
+          
          })
+        
      }
-    
+  }
     return(
         <>
         <div className="Regi">
             <div className="regi-wrap">
                 <form className="reg-form" onSubmit={ShowResults}>
                     <h1 className="in"> Register</h1>
+                    <br/>
+                    <div>
+                  Register As <input
+                     type="radio"
+                     name="UserType"
+                     value="User"
+                     onChange={(e)=>setUserType(e.target.value)}
+                   />{""}
+                   User
+                   <input
+                   type="radio"
+                     name="UserType"
+                     value="Admin"
+                     onChange={(e)=>setUserType(e.target.value)}
+                   />{""}
+                   Admin
+                   </div>
+                   <br/>
+                   {UserType==="Admin" ?(
+                   <div className="reg-form-in">
+                   <label>SecretKey*:
+                      <input type="text" name="SecretKey" onChange={handlerChange} value={forms.SecretKey} 
+                       />
+                    </label>
+                    </div>
+):null}
                     <div className="reg-form-in">
                     <label>first Name*:
                       <input type="text" name="firstName" onChange={handlerChange} value={forms.firstName} 

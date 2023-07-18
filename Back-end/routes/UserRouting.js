@@ -5,6 +5,7 @@ const Register=require("../Models/Register")
 const bcrypt=require("bcryptjs")
 const jwt=require("jsonwebtoken")
 
+
 JWT_SECRET="sdgvfadsgjvfwret@@$%&()(GFFVGUGTG(*&$%Y&YU()(*&GUJHTH"
 
 router.post("/signIn",async(req,res)=>{
@@ -29,7 +30,7 @@ res.json({status:"error", error:"Invalid Password"})
 })
 router.post("/signUp",async(req,res)=>{
 
-   const {firstName,lastName,password,Mnumber,email,choice,retypePassword,retypeEmail}=req.body
+   const {firstName,lastName,password,Mnumber,email,choice,retypePassword,retypeEmail,UserType}=req.body
   const encryptedPassword=await bcrypt.hash(password,10);
     try {
         const oldUser= await Register.findOne({email})
@@ -44,7 +45,8 @@ router.post("/signUp",async(req,res)=>{
             Mnumber,
             retypePassword,
             choice,
-            retypeEmail
+            retypeEmail,
+            UserType
         });
        res.send({status:"ok"}) 
     } catch (error) {
@@ -77,6 +79,55 @@ router.post("/userData",async(req,res)=>{
     
   } catch (error) {
     
+  }
+})
+
+router.post("/forgotPass",async(req,res)=>{
+  const{email}=req.body;
+  try {
+    const oldUsers= await Register.findOne({email});
+    if(!oldUsers){
+      return res.json({status:"USER DOESN'T EXIT"});
+    }
+      const secret=JWT_SECRET +oldUsers.password;
+      const token=jwt.sign({email:oldUsers.email, id:oldUsers._id},secret,{
+        expiresIn:"5m",
+      });
+      const link=`http://localhost:1789/kai/forgotPass/${oldUsers._id}/${token}`
+      console.log(link)
+    
+    
+  } catch (error) {
+    
+  }
+
+})
+
+router.get("/forgotPass/id:/:token",async(req,res)=>{
+     const{id,token}=req.params;
+     console.log(req.params)
+     res.send("done")
+})
+
+router.get("/getAllUser",async(req,res)=>{
+  try {
+    const allUser= await Register.find({})
+    res.send({status:"ok", data:allUser})
+  } catch (error) {
+    console.log(error)
+  }
+})
+
+router.post("/deleteUser",(req,res)=>{
+  const {userid}=req.body
+  try {
+    Register.deleteOne({_id:userid},function(err,res){
+      console.log(err)
+    });
+    res.send({status:"ok",data:"Deleted"})
+    
+  } catch (error) {
+    console.log(error)
   }
 })
 module.exports=router;

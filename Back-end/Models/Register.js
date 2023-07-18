@@ -35,9 +35,15 @@ const SignUpSchema= new Schema({
         type:String,
         required:true
     },
+    UserType:{
+        type:String,
+    },
+   
 },
 {
     timestamps:true
-})
+},
+
+)
 
 module.exports= mongoose.model("signup",SignUpSchema)

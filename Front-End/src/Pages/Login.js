@@ -50,7 +50,7 @@ const Login = () => {
                      <input type="text" name="email" onChange={Changer} value={Loginform.email} />
                   </div> 
                <label> Password: </label>
-             <Link to="/forgot" className="fogot">Forgot Password?</Link>
+             <Link to="/forgotPass" className="fogot">Forgot Password?</Link>
               <div className="ad">  
                   <input type="password" name="password" onChange={Changer} value={Loginform.password} />
                </div>
